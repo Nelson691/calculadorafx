@@ -1,11 +1,11 @@
 package pe.edu.upeu.calcfx;
 
 import atlantafx.base.theme.PrimerLight;
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.application.Application;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
@@ -41,7 +41,7 @@ public class CalcFxApplication extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		Scene xD = new Scene(parent);
+		Scene scene = new Scene(parent);
 
 		double preferredWidth = parent.prefWidth(-1);
 		double preferredHeight = parent.prefHeight(-1);
@@ -49,9 +49,9 @@ public class CalcFxApplication extends Application {
 		stage.setMinHeight(preferredHeight);
 
 		Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
-		xD.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+		scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
 
-		stage.setScene(xD);
+		stage.setScene(scene);
 		stage.setTitle("Spring Java-FX");
 		stage.show();
 
